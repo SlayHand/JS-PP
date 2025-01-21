@@ -26,3 +26,7 @@ p {
     font-weight: 300;
     color: rgb(36, 36, 36)
 }
+
+.main-header__nav{
+    background-color: rgb(2, 192, 183);
+} 

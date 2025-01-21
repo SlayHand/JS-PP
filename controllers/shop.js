@@ -5,7 +5,7 @@ class ShopController{
     getIndex = async (req, res, next) => {
         try {
             const products = await productModel.findAll();
-            console.log(products)
+            //console.log(products)
 
             res.render('shop/index',{
                 prods: products,

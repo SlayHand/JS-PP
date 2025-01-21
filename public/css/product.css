@@ -1,0 +1,28 @@
+.centered {
+    display:flex;
+    align-items: center;
+    max-width: 300px;
+    background-color:aqua;
+}
+
+.centered h1 {
+    font-size: 30px;
+    font-weight: 600;
+    color: rgb(51, 51, 51);
+}
+img {
+    min-width: 500px;
+    width: 80%;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: rgb(209, 5, 5)
+}
+
+p {
+    font-size: 20px;
+    font-weight: 300;
+    color: rgb(36, 36, 36)
+}

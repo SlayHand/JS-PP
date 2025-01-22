@@ -1,0 +1,36 @@
+<%- include('../Includes/header.ejs') %>
+    <link rel="stylesheet" href="../css/product.css">
+</head>
+
+<body>
+    <%- include('../Includes/navigation.ejs') %>
+    <main>
+        <% if(prods.length > 0){ %>
+            <div class="grid">
+                <% prods.forEach(product => { %>
+            <article class="card product-item">
+                <header class="card-header">
+                    <h1 class="product-title"><%= product.title %></h1>
+                </header>
+                <div class="card-image">
+                    <img src="<%= product.imageUrl %>" alt="AMONGUS">
+                </div>
+                <div class="card-content">
+                    <h2 class="products_price"><%= product.price %></h2>
+                    <p class="product-description"><%= product.description %></p>
+                </div>
+                <div class="card-action">
+                    <form action="/cart" method="post">
+                        <button class="btn" type="submit">Add to Cart</button>
+                        <input type="hidden" name="productId" value="<%= product.id %>">
+                    </form>
+                </div>
+            </article>
+        <% }) %>   
+        </div>
+        <% } else { %> 
+            <p>No products available at the moment.</p>
+        <% } %>
+    </main>
+</body>
+</html>

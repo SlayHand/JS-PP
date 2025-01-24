@@ -16,6 +16,57 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `cartItems`
+--
+
+DROP TABLE IF EXISTS `cartItems`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `cartItems` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `quantity` int DEFAULT NULL,
+  `cartId` int DEFAULT NULL,
+  `productId` int unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `cartId` (`cartId`),
+  KEY `productId` (`productId`),
+  CONSTRAINT `cartItems_ibfk_1` FOREIGN KEY (`cartId`) REFERENCES `carts` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `cartItems_ibfk_2` FOREIGN KEY (`productId`) REFERENCES `products` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `cartItems`
+--
+
+LOCK TABLES `cartItems` WRITE;
+/*!40000 ALTER TABLE `cartItems` DISABLE KEYS */;
+/*!40000 ALTER TABLE `cartItems` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `carts`
+--
+
+DROP TABLE IF EXISTS `carts`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `carts` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `carts`
+--
+
+LOCK TABLES `carts` WRITE;
+/*!40000 ALTER TABLE `carts` DISABLE KEYS */;
+/*!40000 ALTER TABLE `carts` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `products`
 --
 
@@ -51,4 +102,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-01-16 13:12:40
+-- Dump completed on 2025-01-21 12:48:53

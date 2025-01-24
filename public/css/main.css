@@ -38,8 +38,6 @@ a {
     box-sizing: border-box;
     white-space: nowrap; /* Prevents wrapping */
 }
-<<<<<<< HEAD
-=======
 .main-header__nav {
     position:fixed;
     top: 0;
@@ -63,4 +61,3 @@ a {
     color: rgb(255, 213, 0);
     align-items:center;
 }
->>>>>>> 61e6efb3851d12d120f3d6bab4dff52865d7f160

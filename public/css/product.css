@@ -1,29 +1,32 @@
-.centered {
-    display:flex;
-    align-items: center;
-    max-width: 300px;
-    background-color:aqua;
+.card {
+    background-color:rgb(255, 234, 117);
 }
 
-.centered h1 {
-    font-size: 30px;
+.card.product-item {
+
+
+
+}
+
+.card__image {
+ width: 100%;
+ object-fit: contain;
+}
+
+h2 {  /*hind*/
+    font-size: 60px;
     font-weight: 600;
-    color: rgb(51, 51, 51);
-}
-img {
-    min-width: 500px;
-    width: 80%;
+    color: rgb(249, 0, 0)
 }
 
-h2 {
-    font-size: 32px;
-    font-weight: 600;
-    color: rgb(255, 0, 0)
-}
-
-p {
+p {  /*description*/
     font-size: 20px;
     font-weight: 300;
-    color: rgb(36, 36, 36)
+    color: rgb(0, 0, 0)
 }
 
+.grid {
+    display: flex;
+    max-width: 90%;
+    margin: 50px;
+}

@@ -1,15 +1,13 @@
 <%- include('../includes/header.ejs') %>
-    <link rel="stylesheet" href="/css/cart.css">
-
+<link rel="stylesheet" href="/css/cart.css">
 </head>
 
 <body>
     <%- include('../includes/navigation.ejs') %>
     <main>
-        <% const prod = products %>
-        <% if (prod.length > 0) { %>
+        <% if (products.length > 0) { %>  <!-- No need to declare 'prod' -->
             <ul class="cart__item-list">
-                <% prod.forEach(p => { %>
+                <% products.forEach(p => { %>
                     <li class="cart__item">
                         <h1><%= p.title %></h1>
                         <h2>Quantity: <%= p.quantity %></h2>

@@ -1,6 +1,4 @@
 const db = require('../utils/db');
-
-
 const getEditProduct = (req, res) => {
     const id = req.params.id;
 
@@ -51,5 +49,5 @@ const postEditProduct = (req, res) => {
 
 module.exports = {
     getEditProduct,
-    postEditProduct,
+    postEditProduct
 };

@@ -17,6 +17,25 @@ html,body {
     padding-top:50px;
 }
 
-a{
+
+a {
     text-decoration: none;
-}  
+}  .button-container {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+    justify-content: center;
+    width: 100%;
+}
+
+.button-container form {
+    flex: 1; /* Makes the form take up equal space */
+}
+
+.btn {
+    width: 100%; /* Ensures buttons inside form & div are equal */
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    box-sizing: border-box;
+    white-space: nowrap; /* Prevents wrapping */
+}

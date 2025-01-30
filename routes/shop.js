@@ -5,6 +5,12 @@ const ShopController = require('../controllers/shop');
 const adminController = require ('../controllers/edit.js')
 
 const router = express.Router();
+<<<<<<< HEAD
+//test
+router.get('/', (req, res, next) => {
+    res.send('<b>Web shop page</b>');
+});
+=======
 
 router.get('/', async (req, res, next) => ShopController.getIndex(req, res, next));
 router.get('/products', async (req, res, next) => ShopController.getAllProducts(req, res, next));
@@ -13,5 +19,6 @@ router.post('/products/:productId', async (req, res, next) => ShopController.get
 router.get('/cart', async (req, res, next) => ShopController.getCart(req, res, next));
 router.post('/cart', async (req, res, next) => ShopController.postCart(req, res, next));
 router.post('/cart-delete-item', async (req, res, next) => ShopController.cartDeleteItems(req, res, next)); // Fixed method name
+>>>>>>> yl4
 
 module.exports = router;

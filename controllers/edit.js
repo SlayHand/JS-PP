@@ -18,17 +18,7 @@ const getEditProduct = (req, res) => {
     });
 };
 
-/**
- * Handles the POST request to edit a product.
- *
- * @param {Object} req - The request object.
- * @param {Object} req.body - The body of the request.
- * @param {string} req.body.productId - The ID of the product to be edited.
- * @param {string} req.body.title - The new title of the product.
- * @param {number} req.body.price - The new price of the product.
- * @param {string} req.body.description - The new description of the product.
- * @param {Object} res - The response object.
- */
+
 
 const postEditProduct = (req, res) => {
     const { productId, title, price, description } = req.body;
